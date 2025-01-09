@@ -1,0 +1,307 @@
+/* Modern Variables */
+:root {
+    --primary: #6C63FF;
+    --secondary: #2A2A72;
+    --accent: #00F5FF;
+    --dark: #1A1A1A;
+    --light: #F5F5F5;
+    --glass: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Global Reset and Fonts */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  body {
+    background: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+  }
+  
+  /* Smooth Scroll Behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Top Bar Styling */
+  .topbar {
+    background: var(--secondary);
+    color: white;
+    padding: 8px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+  
+  .topbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .topbar a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .topbar a:hover {
+    color: var(--accent);
+  }
+  
+  /* Navigation Styling */
+  .navigation {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .nav-links ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+  }
+  
+  .nav-links a {
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+  }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  nav button {
+    height: 38px;
+  }
+  
+  /* Search Input Styling */
+  input[type="text"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--primary);
+    background: white;
+  }
+  
+  /* Intro Section */
+  .intro {
+    display: flex;
+    align-items: center;
+    padding: 80px 5%;
+    gap: 50px;
+  }
+  
+  .intro-text {
+    flex: 1;
+  }
+  
+  .intro-text p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.2;
+  }
+  
+  .intro-image {
+    flex: 1;
+  }
+  
+  .intro-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Button Styling */
+  button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(108, 99, 255, 0.2);
+  }
+  
+  /* Appointment Section */
+  .appointment {
+    background: linear-gradient(45deg, var(--secondary), var(--primary));
+    color: white;
+    padding: 60px 5%;
+    text-align: center;
+  }
+  
+  .appointment h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .appointment button {
+    background: white;
+    color: var(--primary);
+    margin-top: 20px;
+  }
+  
+  /* Experience Section */
+  .experience {
+    display: flex;
+    align-items: center;
+    padding: 80px 5%;
+    gap: 50px;
+  }
+  
+  .experience-text {
+    flex: 1;
+  }
+  
+  .experience-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Posters Section */
+  .posters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 5%;
+  }
+  
+  .posters > div {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .posters > div:hover {
+    transform: translateY(-10px);
+  }
+  
+  .posters img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .posters p {
+    padding: 20px;
+    font-weight: 500;
+  }
+  
+  /* Product Cards */
+  .product-cards, .team-cards {
+    padding: 80px 5%;
+    text-align: center;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card h3 {
+    margin: 15px 0 10px;
+  }
+  
+  .card p {
+    color: #666;
+    padding-bottom: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .intro, .experience {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .navigation {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .nav-links ul {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .topbar {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .intro-text p {
+      font-size: 2rem;
+    }
+  }
